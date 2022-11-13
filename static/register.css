@@ -6,10 +6,6 @@ h1{
     color: white;
     text-align: center;
 }
-div {
-    color: black;
-    background: white;
-}
 button {
     width: 500px;
     background-color: transparent;
@@ -18,4 +14,8 @@ button {
     outline-width: 5px;
     border: 10px transparent;
     color: white;
+}
+p {
+    color: white;
+    display: inline;
 }
