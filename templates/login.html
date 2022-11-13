@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div class="container">
+		<h1>Aober</h1>
+		<form action="" method="post" novalidate>
+			<div>
+				{{ form.username.label }}
+				{{ form.username }}
+			</div>
+			{% for err in form.username.errors %}
+			<div class="col-md-12">
+				<p style="color: red;">{{err}}</p>
+			</div>
+			{% endfor %}
+			<div>
+				{{ form.password.label }}
+				{{ form.password }}
+				{% for err in form.password.errors %}
+				<div>
+					<p style="color: red;">{{ err }}</p>
+				</div>
+				{% endfor %}
+			</div>
+			{{ form.csrf_token }}
+			{{ form.submit }}
+		</form>
+		{% if data  %}
+		用户名: {{ data['username'] }}
+		<br>
+		密码: {{ data['password']}}
+		{% endif %}
+	</div>
+</body>
+</html>
